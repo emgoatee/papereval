@@ -71,6 +71,7 @@ Upload your list of articles to get started.
 
 # Sidebar
 with st.sidebar:
+
     st.header("Instructions")
     st.markdown("""
     1. Upload an Excel file with the required columns: `Title`, `Abstract`, `Publication Year`, `Journal`.
@@ -228,6 +229,7 @@ def fuzzy_match_journal(journal, journal_list, threshold=90):
 def main():
 
     # Load the normalized h-index file from the resources folder
+    h_index_folder = "resources"  # Folder where the h-index file is stored
     h_index_file = "normalized_h_index.xlsx"  # Name of the h-index file
     h_index_path = os.path.join(h_index_folder, h_index_file)
 
